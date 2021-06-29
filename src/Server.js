@@ -11,5 +11,5 @@ app.get('/', async (req, res) => {
 app.use('/take', require('./Routes/Take'));
 
 app.listen(process.env.PORT || 3000, () => {
-	console.log('Servidor online.');
+	console.log('Take API Server Online.');
 });
