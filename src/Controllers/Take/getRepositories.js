@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const { take_repositories_api } = require('../../Services/Take');
 
-async function getRepositories() {
+async function getRepositories(req) {
 	let data = await axios.get(take_repositories_api)
 		.then(response => {
 			return response.data;
@@ -25,10 +25,11 @@ async function getRepositories() {
 	data = data.map(repo => {
 		return {
 			id: repo.id,
-			name: repo.name,
+			name: repo.full_name,
 			html_url: repo.html_url,
 			description: repo.description,
 			language: repo.language,
+			image: req.hostname,
 			created_at: repo.created_at
 		}
 	});

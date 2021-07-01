@@ -1,3 +1,3 @@
 module.exports = {
-	take_repositories_api: 'https://api.github.com/users/takenet/repos'
+	take_repositories_api: 'https://api.github.com/users/takenet/repos?language=c#'
 }

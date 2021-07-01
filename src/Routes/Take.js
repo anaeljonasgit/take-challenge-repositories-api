@@ -4,7 +4,7 @@ const route = express.Router();
 const getRepositories = require('../Controllers/Take/getRepositories');
 
 route.get('/repositories', async (req, res) => {
-	res.send(await getRepositories());
+	res.send(await getRepositories(req));
 });
 
 module.exports = route;
