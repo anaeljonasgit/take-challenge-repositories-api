@@ -10,8 +10,6 @@ async function getRepositories(req, res) {
 			return erro;
 		});
 
-	data.erro = 'teste';
-
 	if (data.erro) {
 		res.status(500);
 		return res.send({ erro: data.erro });
