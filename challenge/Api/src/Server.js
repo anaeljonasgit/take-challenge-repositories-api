@@ -1,6 +1,8 @@
 const express = require('express');
+const httpsRedirect = require('express-https-redirect');
 
 const app = express();
+app.use('/', httpsRedirect());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
