@@ -1,1 +1,1 @@
-web: node challenge/Api/src/Server.js
+web: npm start
