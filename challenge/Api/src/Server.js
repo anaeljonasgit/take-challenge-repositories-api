@@ -5,7 +5,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.get('/', async (req, res) => {
-	res.send('Take API Server Online.');
+	res.redirect('/take/repositories');
 });
 
 app.use('/take', require('./Routes/Take'));
