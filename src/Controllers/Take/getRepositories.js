@@ -30,7 +30,7 @@ async function getRepositories(req, res) {
 			html_url: repo.html_url,
 			description: repo.description,
 			language: repo.language,
-			image: `${req.protocol}://${req.headers.host}/Public/take_logo.png`,
+			image: repo.owner.avatar_url,
 			created_at: repo.created_at
 		}
 	});
