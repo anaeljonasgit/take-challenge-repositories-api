@@ -34,7 +34,7 @@ async function getRepositories(req) {
 		}
 	});
 
-	return data;
+	return data.splice(0, 5);
 }
 
 module.exports = getRepositories;
